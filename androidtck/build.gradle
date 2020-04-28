@@ -1,0 +1,121 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google() //agregado me
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+}
+
+//task clean(type: Delete) {
+//    delete rootProject.buildDir
+//}
+
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        applicationId 'com.academiamoviles.tracklogcopilototck'
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1..0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    signingConfigs {
+        /**
+         debug {storeFile file("../app/keystore/debug.keystore")
+         storePassword "android"
+         keyAlias "androiddebugkey"
+         keyPassword "android"}*/
+        release {
+            storeFile file('../app/keystore/acadmoviles_keystore.jks')
+            storePassword "ac4dm0v@tracklog"
+            keyAlias "acadmov_tracklog"
+            keyPassword "ac4dm0v@tracklog"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def newName = output.outputFile.name
+                    newName = newName.replace("app-", "TracklogCopiloto-")
+                    newName = newName.replace("-release", "")
+                    //output.outputFileName = new File(output.outputFile.parent, newName)
+                    output.outputFileName = new File(
+                            "./../../../../../build/",
+                            output.outputFile.name)
+                }
+            }
+        }
+    }
+    productFlavors {
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/rxjava.properties'
+
+        exclude 'jsr305_annotations/Jsr305_annotations.gwt.xml'
+
+        exclude 'error_prone/Annotations.gwt.xml'
+        exclude 'third_party/java_src/error_prone/project/annotations/Annotations.gwt.xml'
+        exclude 'third_party/java_src/error_prone/project/annotations/Google_internal.gwt.xml'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    //compile 'com.android.support:support-v4:25.4.0'
+    implementation 'com.google.android.gms:play-services-maps:12.0.1'
+    //implementation 'com.google.android.gms:play-services:12.0.1'
+    implementation 'com.google.maps.android:android-maps-utils:1.1.0'
+
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:25.1.1'
+    testImplementation 'junit:junit:4.12'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:recyclerview-v7:25.1.1'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    compile files('libs/javaGeom-0.11.2.jar')
+}

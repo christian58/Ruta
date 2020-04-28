@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/reports"
+        app:showAsAction="never"
+        android:title="Ultimo Reporte">
+    </item>
+    <item
+        android:id="@+id/log_reports"
+        app:showAsAction="never"
+        android:title="Reportes">
+    </item>
+
+
+
+</menu>

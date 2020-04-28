@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtCerco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_4"
+            android:text="Cerco no encontrado."
+            android:gravity="center"
+            android:textSize="@dimen/size_text_cerco" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/viewFlash"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorGreen"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_copiloto">
+
+                <TextView
+                    android:id="@+id/txtTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_16"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imgVelocidadGPS"
+                    android:layout_marginBottom="@dimen/margin_4"
+                    android:text="@string/velocidad_gps"
+                    android:textSize="@dimen/size_text_veloc_actual"
+                    android:maxLines="1"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgVelocidadGPS"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/v5_c1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/margin_8">
+
+                        <TextView
+                            android:id="@+id/txtVelocidadGPS"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="200"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="@dimen/size_velocity_gps"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtUnidadGPS"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:layout_marginTop="@dimen/margin_km"
+                            android:text="km/h"
+                            android:gravity="center"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="@dimen/size_unidad"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/v5_fondo2"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_copiloto">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_4"
+                    android:text="@string/velocidad_cerco"
+                    android:textColor="@color/colorLastConnection"
+                    android:textSize="@dimen/size_text_veloc_gps"
+                    android:maxLines="1"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgVelocidadCerco"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/v5_c2" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtVelocidadCerco"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:gravity="center"
+                            android:text="300"
+                            android:textSize="@dimen/size_velocity_max"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:layout_marginTop="@dimen/margin_km"
+                            android:gravity="center"
+                            android:text="km/h"
+                            android:textSize="@dimen/size_unidad"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_dark"
+        android:gravity="center"
+        android:padding="@dimen/margin_16"
+        android:text="No se ha podido encontrar la señal del GPS"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+</RelativeLayout>

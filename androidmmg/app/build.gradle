@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.academiamoviles.tracklogcopilotommgnuevo"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 9
+        versionName "1.5"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    signingConfigs {
+        /**
+        debug {
+            storeFile file("../app/keystore/debug.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }*/
+        release {
+            storeFile file('../app/keystore/acadmoviles_keystore.jks')
+            storePassword "ac4dm0v@tracklog"
+            keyAlias "acadmov_tracklog"
+            keyPassword "ac4dm0v@tracklog"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def newName = output.outputFile.name
+                    newName = newName.replace("app-", "TracklogCopiloto-")
+                    newName = newName.replace("-release", "")
+                    output.outputFile = new File(output.outputFile.parent, newName)
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:recyclerview-v7:25.1.1'
+    compile 'com.google.code.gson:gson:2.4'
+    compile files('libs/javaGeom-0.11.2.jar')
+}

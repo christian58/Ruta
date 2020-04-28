@@ -1,0 +1,14 @@
+<resources>
+
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_copiloto">20dp</dimen>
+
+    <dimen name="margin_km">-14dp</dimen>
+
+    <dimen name="size_unidad">30sp</dimen>
+    <dimen name="size_velocity_gps">@dimen/size_velocity_max</dimen>
+    <dimen name="size_velocity_max">96sp</dimen>
+    <dimen name="size_text_veloc_actual">@dimen/size_text_veloc_gps</dimen>
+    <dimen name="size_text_veloc_gps">22sp</dimen>
+    <dimen name="margintop_veloc_actual">40dp</dimen>
+</resources>

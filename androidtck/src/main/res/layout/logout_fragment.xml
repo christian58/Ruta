@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_16">
+
+            <ImageView
+                android:layout_width="@dimen/login_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_16"
+                android:adjustViewBounds="true"
+                android:src="@drawable/v1_logo" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_16">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/requiere"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:layout_margin="@dimen/margin_16"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_16"
+                android:background="@drawable/v01_grilla"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_24"
+                        android:layout_height="@dimen/icon_24"
+                        android:layout_marginLeft="@dimen/margin_8"
+                        android:layout_marginRight="@dimen/margin_8"
+                        android:src="@drawable/v01_ico1" />
+
+                    <EditText
+                        android:id="@+id/edtUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/hint_usuario"
+                        android:inputType="textPersonName"
+                        android:minHeight="@dimen/touchable_target" />
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:background="@color/colorLine" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_24"
+                        android:layout_height="@dimen/icon_24"
+                        android:layout_marginLeft="@dimen/margin_8"
+                        android:layout_marginRight="@dimen/margin_8"
+                        android:src="@drawable/v01_ico2" />
+
+                    <EditText
+                        android:id="@+id/edtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/hint_contrasena"
+                        android:inputType="textPassword"
+                        android:minHeight="48dp" />
+                </TableRow>
+            </TableLayout>
+
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_16"
+                android:background="@drawable/v01_btn"
+                android:text="@string/btn_salir"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

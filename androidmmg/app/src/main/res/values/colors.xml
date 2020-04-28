@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#002D65</color>
+    <color name="colorPrimaryDark">#002D65</color>
+    <!--
+    <color name="colorPrimaryDark">#064266</color>-->
+    <color name="colorSecondary">#00BEF2</color>
+    <color name="textColorPrimary">#ffffff</color>
+    <color name="textColorApp">#000000</color>
+    <color name="colorAccent">#1c7db7</color>
+
+    <color name="colorLine">#d6d6d6</color>
+    <color name="colorLastConnection">#686868</color>
+
+    <color name="colorGPS">#007dff</color>
+    <color name="colorCerco">#028b00</color>
+    <color name="colorGreen">@color/colorCerco</color>
+    <color name="colorOrange">#ff9833</color>
+    <color name="colorRed">#ff0000</color>
+    <color name="colorRed2">#ff7b7b</color>
+
+</resources>

@@ -1,0 +1,28 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="login_width">250dp</dimen>
+    <dimen name="margin_copiloto">18dp</dimen>
+
+    <dimen name="line_1">1dp</dimen>
+
+    <dimen name="touchable_target">48dp</dimen>
+    <dimen name="icon_24">24dp</dimen>
+
+    <dimen name="margin_km">-12dp</dimen>
+
+    <dimen name="size_unidad">25sp</dimen>
+    <dimen name="size_velocity_gps">@dimen/size_velocity_max</dimen>
+    <dimen name="size_velocity_max">85sp</dimen>
+    <dimen name="size_text_veloc_actual">@dimen/size_text_veloc_gps</dimen>
+    <dimen name="size_text_veloc_gps">18sp</dimen>
+    <dimen name="margintop_veloc_actual">30dp</dimen>
+
+    <dimen name="size_text_cerco">16sp</dimen>
+
+</resources>

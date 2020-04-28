@@ -1,0 +1,26 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+
+
+    <dimen name="margin_16">24dp</dimen>
+    <dimen name="margin_copiloto">10dp</dimen>
+<!--34-->
+    <dimen name="margin_km">-50dp</dimen>
+<!--    -22-->
+
+    <dimen name="size_unidad">52sp</dimen>
+<!--    72-->
+    <dimen name="size_velocity_gps">@dimen/size_velocity_max</dimen>
+    <dimen name="size_velocity_max">150sp</dimen>
+<!--    96-->
+    <dimen name="size_text_veloc_actual">@dimen/size_text_veloc_gps</dimen>
+    <dimen name="size_text_veloc_gps">55sp</dimen>
+    <dimen name="margintop_veloc_actual">90dp</dimen>
+
+    <dimen name="size_text_cerco">35sp</dimen>
+</resources>
+<!--velocity_max 200-->
+<!--55_veloc_gps-->
+<!--72 suze_unidad-->

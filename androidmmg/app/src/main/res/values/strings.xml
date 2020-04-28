@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Tracklog Copiloto</string>
+    <!--
+    <string name="base_url">http://162.243.65.44:3030/ws/</string>-->
+    <string name="base_url">http://tracklogservice.com:8080/ws/</string>
+    <string name="preference_key">PREFERENCE_USER</string>
+    <string name="user">USER</string>
+    <string name="pass">PASSWORD</string>
+    <string name="user_web">USERWEB</string>
+
+    <!--LOGIN-->
+    <string name="hint_usuario">Usuario</string>
+    <string name="hint_contrasena">Contraseña</string>
+    <string name="btn_ingresar">INGRESAR</string>
+
+    <!--LOGOUT-->
+    <string name="requiere">Para salir del App requiere</string>
+    <string name="btn_salir">SALIR</string>
+
+
+    <!--RUTAS-->
+    <string name="rutas">RUTAS</string>
+
+    <!--USO APP-->
+    <string name="uso_app">Uso del aplicativo</string>
+
+    <!--COPILOTO-->
+    <string name="copiloto">COPILOTO</string>
+    <string name="velocidad_gps">VELOCIDAD ACTUAL</string>
+    <string name="velocidad_cerco">VELOCIDAD MÁXIMA</string>
+</resources>
